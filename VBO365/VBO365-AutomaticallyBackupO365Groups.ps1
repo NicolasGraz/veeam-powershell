@@ -24,7 +24,7 @@ $Org = Get-VBOOrganization -Name $Organization
 # Leverage the Job which backs up the required Office 365 groups
 $Job = Get-VBOJob -Name $BackupJob
 # Get the Office 365 groups
-$Groups = Get-VBOOrganizationGroup -Organization $organization -Type Office365
+$Groups = Get-VBOOrganizationGroup -Organization $org -Type Office365
 
 # Go through all the Office 365 groups and add them to the job
 ForEach ($Group in $Groups) {
